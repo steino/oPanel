@@ -106,7 +106,7 @@ addon:SetScript("OnEvent", function(self)
 		CHAT_FRAME_TEXTURES[k] = nil
 	end
 
-	for i, t in next, {true, true, nil, true, nil, nil, nil} do
+	for i, t in next, {true, true, nil, nil, nil, nil, nil} do
 		if(t) then
 			local cf = _G["ChatFrame"..i]
 
@@ -121,7 +121,7 @@ addon:SetScript("OnEvent", function(self)
 
 	ChatFrame1:SetPoint("LEFT", self, 28, 0)
 	ChatFrame2:SetPoint("RIGHT", self, -28, 0)
-	ChatFrame3:SetPoint('CENTER', self, -28, 0)
+	--ChatFrame3:SetPoint('CENTER', self, -28, 0)
 
 	WorldFrame:SetUserPlaced(false)
 
