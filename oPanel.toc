@@ -5,3 +5,4 @@
 
 core\bindings.lua
 core\panel.lua
+core\skada.lua
