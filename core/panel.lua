@@ -123,12 +123,14 @@ addon:SetScript("OnEvent", function(self)
 	ChatFrame2:SetPoint("RIGHT", self, -28, 0)
 
 	-- Move Skada
-	local frame = SkadaBarWindowSkada
+	if select(4, GetAddOnInfo"Skada") then
+		local skada = SkadaBarWindowSkada
 
-	frame:ClearAllPoints()
-	frame:SetPoint("LEFT", oPanel, 550,0)
-	frame:SetPoint("BOTTOM", oPanel, 0, 8)
-	frame:SetPoint("TOP", oPanel, 0, 6)
+		skada:ClearAllPoints()
+		skada:SetPoint("RIGHT", oPanel, -570,0)
+		skada:SetPoint("BOTTOM", oPanel, 0, 8)
+		skada:SetPoint("TOP", oPanel, 0, 6)
+	end
 
 	WorldFrame:SetUserPlaced(false)
 
