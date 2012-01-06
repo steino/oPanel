@@ -43,7 +43,7 @@ local modifier = 1/steps
 
 -- this is... frame madness!
 local hc = 0
-local min, max, temp = 50, 180
+local min, max, temp = 50.5, 180
 
 local onUpdate = function(self)
 	hc = hc + 1
@@ -121,16 +121,6 @@ addon:SetScript("OnEvent", function(self)
 
 	ChatFrame1:SetPoint("LEFT", self, 28, 0)
 	ChatFrame2:SetPoint("RIGHT", self, -28, 0)
-
-	-- Move Skada
-	if select(4, GetAddOnInfo"Skada") then
-		local skada = SkadaBarWindowSkada
-
-		skada:ClearAllPoints()
-		skada:SetPoint("RIGHT", oPanel, -570,0)
-		skada:SetPoint("BOTTOM", oPanel, 0, 8)
-		skada:SetPoint("TOP", oPanel, 0, 6)
-	end
 
 	WorldFrame:SetUserPlaced(false)
 
