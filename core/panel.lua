@@ -108,6 +108,7 @@ addon:SetScript("OnEvent", function(self)
 
 	for i, t in next, {true, true, nil, nil, nil, nil, nil} do
 		if(t) then
+			UIPARENT_MANAGED_FRAME_POSITIONS["ChatFrame"..i] = nil
 			local cf = _G["ChatFrame"..i]
 
 			cf:SetWidth(550)
@@ -115,7 +116,9 @@ addon:SetScript("OnEvent", function(self)
 			cf:SetPoint("BOTTOM", self, 0, 8)
 			cf:SetPoint("TOP", self, 0, -6)
 
+			FCF_UnDockFrame(cf)
 			FCF_SetLocked(cf, 1)
+			FCF_SetTabPosition(cf, 0)
 		end
 	end
 
